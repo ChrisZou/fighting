@@ -1,0 +1,2 @@
+module FightingsHelper
+end

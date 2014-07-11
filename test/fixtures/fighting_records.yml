@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dt: 2014-07-11 19:54:38
+  notes: MyString
+  Fighting: 
+
+two:
+  dt: 2014-07-11 19:54:38
+  notes: MyString
+  Fighting: 

@@ -1,0 +1,29 @@
+<h1>Listing fighting_records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dt</th>
+      <th>Notes</th>
+      <th>Fighting</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fighting_records.each do |fighting_record| %>
+      <tr>
+        <td><%= fighting_record.dt %></td>
+        <td><%= fighting_record.notes %></td>
+        <td><%= fighting_record.Fighting %></td>
+        <td><%= link_to 'Show', fighting_record %></td>
+        <td><%= link_to 'Edit', edit_fighting_record_path(fighting_record) %></td>
+        <td><%= link_to 'Destroy', fighting_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fighting record', new_fighting_record_path %>

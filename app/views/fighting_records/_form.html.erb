@@ -1,0 +1,29 @@
+<%= form_for(@fighting_record) do |f| %>
+  <% if @fighting_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fighting_record.errors.count, "error") %> prohibited this fighting_record from being saved:</h2>
+
+      <ul>
+      <% @fighting_record.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :dt %><br>
+    <%= f.datetime_select :dt %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :fighting %><br>
+    <%= f.text_field :fighting %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

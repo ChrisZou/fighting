@@ -1,0 +1,28 @@
+<h1>Listing fightings</h1>
+
+<div id="container">
+<div id="contents">
+<table class="table_fighting_list">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fightings.each do |fighting| %>
+      <tr>
+        <td><%= fighting.name %></td>
+        <td><%= link_to 'Show', fighting %></td>
+        <td><%= link_to 'Edit', edit_fighting_path(fighting) %></td>
+        <td><%= link_to 'Destroy', fighting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+<br>
+
+<%= link_to 'New Fighting', new_fighting_path %>
