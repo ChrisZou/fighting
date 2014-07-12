@@ -1,28 +1,18 @@
+
 <h1>Listing fightings</h1>
 
-<div id="container">
-<div id="contents">
-<table class="table_fighting_list">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @fightings.each do |fighting| %>
-      <tr>
-        <td><%= fighting.name %></td>
-        <td><%= link_to 'Show', fighting %></td>
-        <td><%= link_to 'Edit', edit_fighting_path(fighting) %></td>
-        <td><%= link_to 'Destroy', fighting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <div class="fighting_item">
+            <%= link_to fighting.name, fighting %>
+
+            <%= form_for fighting, url:{action:'add_record'}, method:'post' do |f| %>
+                <%= f.text_field :name, name:'notes' %>
+                <%= f.hidden_field :id %>
+                <%= f.submit "打卡", class: 'pure-button pure-button-primary' %>
+            <% end %>
+
+        </div>
     <% end %>
-  </tbody>
-</table>
-</div>
-</div>
 <br>
 
 <%= link_to 'New Fighting', new_fighting_path %>

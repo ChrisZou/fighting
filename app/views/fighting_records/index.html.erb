@@ -15,7 +15,7 @@
       <tr>
         <td><%= fighting_record.dt %></td>
         <td><%= fighting_record.notes %></td>
-        <td><%= fighting_record.Fighting %></td>
+        <td><%= fighting_record.fighting==nil ? '' : fighting_record.fighting.name %></td>
         <td><%= link_to 'Show', fighting_record %></td>
         <td><%= link_to 'Edit', edit_fighting_record_path(fighting_record) %></td>
         <td><%= link_to 'Destroy', fighting_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>

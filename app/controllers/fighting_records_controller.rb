@@ -5,6 +5,8 @@ class FightingRecordsController < ApplicationController
   # GET /fighting_records.json
   def index
     @fighting_records = FightingRecord.all
+    puts @fighting_records.count
+    @fighting_records.each { |fr| puts 'type is: ' << fr.fighting.class.to_s }
   end
 
   # GET /fighting_records/1
@@ -71,4 +73,5 @@ class FightingRecordsController < ApplicationController
     def fighting_record_params
       params.require(:fighting_record).permit(:dt, :notes, :Fighting)
     end
+
 end

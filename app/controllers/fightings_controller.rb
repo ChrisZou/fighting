@@ -21,6 +21,16 @@ class FightingsController < ApplicationController
   def edit
   end
 
+  def add_record
+      record = FightingRecord.new
+      record.dt = DateTime.now
+      fighting_id = params[:fighting][:id]
+      record.fighting = Fighting.find(fighting_id)
+      record.notes = params[:notes]
+      saved = record.save
+      redirect_to fightings_path if saved 
+  end
+
   # POST /fightings
   # POST /fightings.json
   def create
@@ -65,6 +75,14 @@ class FightingsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_fighting
       @fighting = Fighting.find(params[:id])
+    end
+
+    def add_fighting_record_params
+        params.require(:fighting).permit(:id)
+    end
+
+    def fighting_record_notes_params
+        params.permit(:notes)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

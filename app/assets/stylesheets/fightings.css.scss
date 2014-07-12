@@ -1,15 +1,15 @@
 // Place all the styles related to the Fightings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-table.table_fighting_list {
-    text-align:center;
-}
 
 div#container {
-    width:100%;
+    float: right;
+    right: 50%;
+    position: relative;
 }
 
 div#contents {
-    display:table;
-    margin: 0 auto;
+    float: right;
+    right: -50%;
+    position: relative;
 }

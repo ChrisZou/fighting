@@ -6,4 +6,5 @@
 </p>
 
 <%= link_to 'Edit', edit_fighting_path(@fighting) %> |
+<%= link_to 'Destroy', @fighting, method: :delete, data: { confirm: 'Are you sure?' } %> | 
 <%= link_to 'Back', fightings_path %>
