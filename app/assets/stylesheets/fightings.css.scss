@@ -2,14 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div#container {
-    float: right;
-    right: 50%;
-    position: relative;
+div.fighting_item {
+    margin: 20px;
 }
 
-div#contents {
-    float: right;
-    right: -50%;
-    position: relative;
+a.fighting_name {
+    font-size: 13pt;
 }
+

@@ -3,9 +3,9 @@
 
     <% @fightings.each do |fighting| %>
         <div class="fighting_item">
-            <%= link_to fighting.name, fighting %>
+            <%= link_to fighting.name, fighting, class: 'fighting_name' %>
 
-            <%= form_for fighting, url:{action:'add_record'}, method:'post' do |f| %>
+            <%= form_for fighting, url:{action:'add_record'}, method:'post', html:{class: 'pure-form'} do |f| %>
                 <%= f.text_field :name, name:'notes' %>
                 <%= f.hidden_field :id %>
                 <%= f.submit "打卡", class: 'pure-button pure-button-primary' %>

@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+div#container {
+    float: right;
+    right: 50%;
+    position: relative;
+}
+
+div#contents {
+    float: right;
+    right: -50%;
+    position: relative;
+}
