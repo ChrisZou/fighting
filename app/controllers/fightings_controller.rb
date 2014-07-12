@@ -10,6 +10,7 @@ class FightingsController < ApplicationController
   # GET /fightings/1
   # GET /fightings/1.json
   def show
+      @fighting_records = @fighting.fighting_record.all
   end
 
   # GET /fightings/new
