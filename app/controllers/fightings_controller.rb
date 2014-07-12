@@ -52,6 +52,7 @@ class FightingsController < ApplicationController
   # PATCH/PUT /fightings/1.json
   def update
     respond_to do |format|
+        puts fighting_params.to_s
       if @fighting.update(fighting_params)
         format.html { redirect_to @fighting, notice: 'Fighting was successfully updated.' }
         format.json { render :show, status: :ok, location: @fighting }
@@ -78,16 +79,8 @@ class FightingsController < ApplicationController
       @fighting = Fighting.find(params[:id])
     end
 
-    def add_fighting_record_params
-        params.require(:fighting).permit(:id)
-    end
-
-    def fighting_record_notes_params
-        params.permit(:notes)
-    end
-
     # Never trust parameters from the scary internet, only allow the white list through.
     def fighting_params
-      params.require(:fighting).permit(:name)
+      params.require(:fighting).permit(:name, :description)
     end
 end

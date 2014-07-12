@@ -5,6 +5,11 @@
   <%= @fighting.name %>
 </p>
 
+<p>
+  <strong>Description:</strong>
+  <%= @fighting.description %>
+</p>
+
 <% @fighting_records.each do |record| %>
     <div><%= record.dt %></div>
 <% end %>
