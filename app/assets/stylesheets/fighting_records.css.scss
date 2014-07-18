@@ -1,3 +1,18 @@
 // Place all the styles related to the FightingRecords controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+tr.fighting_record_row_header th {
+    padding: 10px;
+}
+
+tr.fighting_record_row {
+    margin: 10px
+}
+
+tr.fighting_record_row td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}

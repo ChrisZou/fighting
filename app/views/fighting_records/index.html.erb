@@ -1,19 +1,20 @@
-<h1>Listing fighting_records</h1>
+<h1 style="text-align:center; padding:20px">Listing Fighting Records</h1>
 
 <table>
   <thead>
-    <tr>
+    <tr class="fighting_record_row_header">
       <th>Dt</th>
       <th>Notes</th>
       <th>Fighting</th>
-      <th colspan="3"></th>
+      <th>Completed</th>
+      <th colspan="3">operation</th>
     </tr>
   </thead>
 
   <tbody>
     <% @fighting_records.each do |fighting_record| %>
-      <tr>
-        <td><%= fighting_record.dt %></td>
+      <tr class='fighting_record_row'>
+        <td><%= fighting_record.dt.strftime('%F %R') %></td>
         <td><%= fighting_record.notes %></td>
         <td><%= fighting_record.fighting==nil ? '' : fighting_record.fighting.name %></td>
         <td><%= fighting_record.succeed? ? '完成' : '失败' %> </td>
