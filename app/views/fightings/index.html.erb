@@ -8,7 +8,8 @@
             <%= form_for fighting, url:{action:'add_record'}, method:'post', html:{class: 'pure-form'} do |f| %>
                 <%= text_field_tag 'notes' %>
                 <%= f.hidden_field :id %>
-                <%= f.submit "打卡", class: 'pure-button pure-button-primary' %>
+                <%= button_tag '完成', name: 'succeed', value: 'true', class: 'pure-button pure-button-primary' %>
+                <%= button_tag '失败', name: 'succeed', value: 'false', class: 'pure-button pure-button-primary' %>
             <% end %>
 
         </div>

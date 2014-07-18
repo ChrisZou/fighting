@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140712190648) do
+ActiveRecord::Schema.define(version: 20140718001150) do
 
   create_table "fighting_records", force: true do |t|
     t.datetime "dt"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20140712190648) do
     t.integer  "fighting_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "succeed"
   end
 
   create_table "fightings", force: true do |t|

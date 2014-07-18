@@ -28,6 +28,7 @@ class FightingsController < ApplicationController
       fighting_id = params[:fighting][:id]
       record.fighting = Fighting.find(fighting_id)
       record.notes = params[:notes]
+      record.succeed = params[:succeed]
       saved = record.save
       redirect_to fightings_path if saved 
   end
